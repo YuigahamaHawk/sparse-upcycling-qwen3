@@ -1,0 +1,11 @@
+{
+  "container": "REPLACE_WITH_USER_STARTED_CONTAINER",
+  "starts_at": "2000-01-01T09:00:00+08:00",
+  "expires_at": "2000-01-01T10:00:00+08:00",
+  "shutdown_margin_seconds": 300,
+  "authorized_physical_gpus": [],
+  "active_physical_gpus": [],
+  "container_device_order": [],
+  "cuda_visible_devices": "",
+  "scope": "Example only; fill from the user's explicitly approved reservation before inference. This example intentionally cannot launch a GPU worker."
+}

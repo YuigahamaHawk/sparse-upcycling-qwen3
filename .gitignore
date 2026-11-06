@@ -1,0 +1,73 @@
+# Model definitions in models/ ARE source code and must remain tracked.
+# Complete weights, adapters, optimizer states and dataset files are not source.
+/checkpoints/
+/runs/
+/logs/
+/datasets/
+/data/
+/outputs/
+/output/
+/wandb/
+*.safetensors
+*.safetensors.index.json
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.gguf
+*.ggml
+*.onnx
+*.h5
+*.hdf5
+*.tflite
+*.pb
+*.msgpack
+*.model
+*.tiktoken
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.jsonl
+*.parquet
+*.arrow
+
+# Local credentials and per-reservation machine settings.
+.env
+.env.*
+!.env.example
+.netrc
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+/configs/serving/lease-*.json
+
+# Maintenance payloads contain old source snapshots and machine evidence.
+# Keep these local; the final reports and historical script recipes remain.
+/docs/maintenance/
+**/_work/
+
+# Python/build/editor caches.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+~$*

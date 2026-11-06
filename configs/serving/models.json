@@ -1,0 +1,18 @@
+{
+  "project_root": "/home/wurendi/projects/sparse_upcycling_qwen3",
+  "models": {
+    "dense-base": {"stage": "dense", "path": "/home/wurendi/models/Qwen-3-8B", "min_gpus": 1},
+    "moe-init": {"stage": "upcycling", "path": "checkpoints/qwen3-8b-8x2-half", "min_gpus": 2},
+    "moe-init-normalized": {"stage": "upcycling", "path": "checkpoints/qwen3-8b-8x2-half-normalized", "min_gpus": 2},
+    "moe-cpt": {"stage": "cpt", "path": "checkpoints/qwen3-8b-8x2-half-cpt-simplewiki-1m", "min_gpus": 2},
+    "moe-cpt-normalized": {"stage": "cpt", "path": "checkpoints/qwen3-8b-8x2-half-normalized-cpt-simplewiki-1m", "min_gpus": 2},
+    "moe-sft": {"stage": "sft", "path": "checkpoints/qwen3-8b-8x2-norm-sft-alpaca-merged-v2", "min_gpus": 2},
+    "moe-dpo": {
+      "stage": "dpo",
+      "path": "checkpoints/qwen3-8b-8x2-norm-sft-alpaca-merged-v2",
+      "adapter": "runs/dpo-hh-20261020/adapter.pt",
+      "min_gpus": 2,
+      "note": "SFT base plus original DPO LoRA AND trained routers; avoids BF16 merged-inference warning."
+    }
+  }
+}
